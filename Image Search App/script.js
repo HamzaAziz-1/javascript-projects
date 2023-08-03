@@ -31,9 +31,9 @@ async function searchImages() {
     imageLink.target = "_blank";
     imageLink.textContent = result.alt_description;
 
-    imageWrapper.appendChild(image);
     imageWrapper.appendChild(imageLink);
-    imageWrapper.appendChild(imageWrapper);
+   imageLink.appendChild(image);
+   searchResults.appendChild(imageWrapper);
   });
 
   page++;
